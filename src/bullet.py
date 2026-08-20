@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 from pygame.surface import Surface
+
 from settings import Settings
 from ship import Ship
 
@@ -11,7 +12,10 @@ class Bullet(Sprite):
     """Gerencia os projéteis disparados pela nave."""
 
     def __init__(
-        self, alien_invasion_screen: Surface, alien_invasion_settings: Settings, alien_invasion_ship: Ship
+        self,
+        alien_invasion_screen: Surface,
+        alien_invasion_settings: Settings,
+        alien_invasion_ship: Ship,
     ) -> None:
         """Cria um objeto para o projétil na posição atual da nave."""
         super().__init__()  # Chama o construtor da classe Sprite para garantir que a classe Bullet seja inicializada corretamente como um sprite do Pygame

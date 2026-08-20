@@ -1,12 +1,15 @@
 import pygame
 from pygame.surface import Surface
+
 from settings import Settings
 
 
 class Ship:
     """Gerencia a nave espacial."""
 
-    def __init__(self, alien_invasion_screen: Surface, alien_invasion_settings: Settings) -> None:
+    def __init__(
+        self, alien_invasion_screen: Surface, alien_invasion_settings: Settings
+    ) -> None:
         """Inicializa a nave e define sua posição inicial."""
         self.screen = alien_invasion_screen
         self.settings = alien_invasion_settings
