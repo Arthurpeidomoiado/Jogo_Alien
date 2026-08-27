@@ -198,7 +198,7 @@ class BulletManager:
     def _remove_offscreen_bullets(self) -> None:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
-                self.bullets.remove(bullet)
+               self.bullets.remove(bullet)
     def _check_bullet_alien_collisions(self,aliens)->None:
         pygame.sprite.groupcollide(self.bullets,aliens,True,True)
 class FleetManager:
@@ -286,7 +286,6 @@ class AlienInvasion:
             self.event_handler._check_events()
             self._update_game_state()
             self.renderer._render_screen()
-if _name_ == "_main_":
+if __name__ == "__main__":
     alien_invasion = AlienInvasion()
     alien_invasion.run_game()
-            
