@@ -5,7 +5,7 @@ from alien import Alien
 from bullet import Bullet
 from settings import Settings
 from ship import Ship
-
+from abc import ABC, abstractmethod
 
 class AlienInvasion:
     """Gerencia o jogo e seus comportamentos."""
@@ -285,7 +285,7 @@ class AlienInvasion:
         while True:
             self.event_handler._check_events()
             self._update_game_state()
-            self.renderer._render_screen()
+            self.renderer._render_screen() 
 if __name__ == "__main__":
     alien_invasion = AlienInvasion()
     alien_invasion.run_game()
