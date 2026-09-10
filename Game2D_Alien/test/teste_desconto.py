@@ -1,5 +1,5 @@
 import pytest
-from src.desconto import DescontoNormal, DescontoVIP, DescontoPremium
+from desconto import DescontoNormal, DescontoVIP
 
 def test_calcular_desconto_normal():
     desconto = DescontoNormal()
