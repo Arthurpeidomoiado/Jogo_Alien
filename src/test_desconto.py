@@ -25,5 +25,3 @@ def test_desconto_vip_parametrizado( valor, esperado):
     resultado = desconto.calcular(valor)
     assert resultado == esperado
     
-test = test_calcular_desconto_normal()
-print(test)

@@ -8,7 +8,7 @@ class Desconto(ABC):
 class DescontoNormal(Desconto):
     def calcular(self,valor,sub):
         valor_desconto = valor * 0.1
-        valor_desconto =valor_desconto + super().matheus -sub
+        valor_desconto =valor_desconto + self.matheus -sub
         return valor_desconto
 class DescontoVIP(Desconto):
     def calcular(self, valor):
