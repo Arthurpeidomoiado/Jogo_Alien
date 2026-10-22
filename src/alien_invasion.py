@@ -1,4 +1,6 @@
+import os
 import sys
+from pathlib import Path
 import pygame
 
 from alien import Alien
@@ -13,9 +15,10 @@ from FleetManager import FleetManager
 
 class AlienInvasion:
     """Gerencia o jogo e seus comportamentos."""
-
     def __init__(self):
         """Construtor da classe que inicializa o jogo e cria os recursos básicos"""
+        # Resolve assets relative to this file, regardless of the launch directory.
+        os.chdir(Path(__file__).resolve().parent)
         pygame.init()
         self.settings = Settings()
 
